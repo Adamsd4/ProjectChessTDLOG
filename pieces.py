@@ -35,6 +35,10 @@ class PieceInfo:
         return piece_char if PieceInfo.get_color(piece) == PieceInfo.black else piece_char.upper()
 
     @staticmethod
+    def opponent_color(color):
+        return 24 - color
+
+    @staticmethod
     def get_valid_moves(piece, board, x, y):
         piece_type = PieceInfo.get_type(piece)
         valid_moves = []
